@@ -1,4 +1,3 @@
-# Declare a pipeline
 pipeline:
   # Declare pipeline step
   composer-install:
