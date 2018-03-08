@@ -12,4 +12,4 @@ pipeline:
   check_http:
     image: fpfis/php56-build
     commands:
-      - wget http://127.0.0.1
+      - curl http://web:8080/
