@@ -1,0 +1,19 @@
+version: "3"
+services:
+    php-webserver:
+      image: fpfis/php56-dev
+      environment:
+        - XDEBUG=true
+        - DOCUMENT_ROOT=/app/build
+      volumes:
+        - ./:/app/build
+      ports:
+        - 8080:8080
+      networks:
+        - frontend
+      deploy:
+        replicas: 1
+        restart_policy:
+          condition: on-failure
+networks:
+    frontend:
