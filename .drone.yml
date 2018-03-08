@@ -3,7 +3,7 @@ workspace:
   path: schwant
 services:
   web:
-    images: fpfis/php56-build
+    image: fpfis/php56-build
 pipeline:
   composer-install:
     images: fpfis/php56-build
