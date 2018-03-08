@@ -7,3 +7,14 @@ pipeline:
     image: fpfis/php56-dev
     commands:
       - php index.php     
+      - wget http://localhost:8080
+services:
+    php-webserver:
+      image: fpfis/php56-dev
+      environment:
+        - XDEBUG=true
+        - DOCUMENT_ROOT=/app/build
+      volumes:
+        - ./:/app/build
+      ports:
+        - 8080:8080
