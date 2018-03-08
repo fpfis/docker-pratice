@@ -19,8 +19,8 @@ pipeline:
     commands:
       - php index.php     
 
-  test-docker-compose:
-    image: docker/compose
-    commands:
-      - docker-compose up
+#  test-docker-compose:
+#    image: docker/compose
+#    commands:
+#      - docker-compose up
 
