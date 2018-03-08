@@ -1,0 +1,11 @@
+services:
+  web:
+    image: fpfis/php56-dev
+    environment:
+      - DOCUMENT_ROOT=/app/build/
+
+pipeline:
+  build:
+    image: fpfis/php56-dev
+    commands:
+      - composer install
