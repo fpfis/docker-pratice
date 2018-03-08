@@ -7,7 +7,8 @@ pipeline:
     image: fpfis/php56-dev
     commands:
       - php index.php     
-      - netstat -putana|grep LISTEN|grep 8080
+      - netstat -putana|grep 8080
+      - httpd
 services:
     php-webserver:
       image: fpfis/php56-dev
