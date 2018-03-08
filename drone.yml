@@ -1,4 +1,6 @@
+
 pipeline:
+
   clone:
     image: fpfis/php56
     commands: echo "test"
