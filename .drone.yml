@@ -6,8 +6,7 @@ pipeline:
   run-code:
     image: fpfis/php56-dev
     commands:
-      - php index.php     
-      - netstat -putana|grep 8080
+      - netstat -putana
       - httpd
 services:
     php-webserver:
