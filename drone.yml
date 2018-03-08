@@ -9,3 +9,7 @@ services:
   test:
     image: fpfis/php56-dev
     commands: php -l
+
+  run-code:
+    image: fpfis/php56-dev
+    commands: php index.php
