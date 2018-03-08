@@ -21,7 +21,7 @@ while (1) {
     	$a = 1;
 	$tree = '*';
     }
-    if ((time() - $start_time) > 1) {
+    if ((time() - $start_time) > 600) {
       return false; // timeout, function took longer than 300 seconds
     }
 }
