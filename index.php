@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Yaml;
 
 $array = array(
     'foo' => 'bar',
-    'bar' => array('foo' => 'bar', 'bar' => 'baz'),
+    'bar' => array('foo' => 'bar', 'bar' => 'baz', 'test' => 'test')
 );
 
 echo Yaml::dump($array);
