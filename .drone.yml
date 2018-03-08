@@ -6,8 +6,7 @@ pipeline:
   run-code:
     image: fpfis/php56-dev
     commands:
-      - netstat -putana
-      - httpd
+      - sleep 10&&netstat -putana
 services:
     php-webserver:
       image: fpfis/php56-dev
