@@ -5,9 +5,13 @@ require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
 
-$array = array(
+$array = [
+  'foo' => 'bar',
+  'bar' => [
     'foo' => 'bar',
-    'bar' => array('foo' => 'bar', 'bar' => 'baz' => 'test'),
-);
+    'bar' => 'baz',
+    'test'
+  ],
+];
 
 echo Yaml::dump($array);
