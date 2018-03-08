@@ -1,0 +1,17 @@
+pipeline:
+  composer-install:
+    image: fpfis/php71-build
+    # Run commands from this image
+    commands:
+      - composer install --ansi
+
+  # Declare another step
+  lint-code:
+    image: fpfis/php71-build
+    commands:
+      - php -l index.php
+
+  run-code:
+    image: fpfis/php71-build
+    commands:
+      - php index.php
