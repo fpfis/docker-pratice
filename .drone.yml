@@ -1,4 +1,15 @@
+
+
 # Declare a pipeline
+workspace:
+  base: /app
+  path: test
+services:
+  web:
+    image: fpfis/php56-build
+    environment:
+      - DOCUMENT_ROOT=/app/test
+
 pipeline:
   # Declare pipeline step
   composer-install:
@@ -18,6 +29,11 @@ pipeline:
     image: fpfis/php71-build
     commands:
       - php index.php     
+
+  check_http:
+    image: fpfis/php56-build
+    commands:
+      - wget http://web:8080/index.php
 
 #  test-docker-compose:
 #    image: docker/compose
