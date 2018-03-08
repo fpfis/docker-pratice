@@ -1,0 +1,11 @@
+services:
+  clone:
+    image: fpfis/php56
+    commands: echo "test"
+
+  composer-install:
+    image: fpfis/php56-dev
+
+  test:
+    image: fpfis/php56-dev
+    commands: php -l
