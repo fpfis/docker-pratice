@@ -1,0 +1,15 @@
+workspace:
+  base: /app
+  path: schwant
+services:
+  web:
+    image: fpfis/php56-build
+pipeline:
+  composer-install:
+    image: fpfis/php56-build
+    commands:
+      - composer install
+  check_http:
+    image: fpfis/php56-build
+    commands:
+      - curl http://web:8080/
