@@ -20,7 +20,7 @@ pipeline:
       - php index.php     
 
   test-docker-compose:
-    image: docker pull docker/compose
+    image: docker/compose
     commands:
       - docker-compose up
 
