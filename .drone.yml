@@ -12,10 +12,10 @@ pipeline:
   lint-code:
     image: fpfis/php71-build
     commands:
-      - php -l hello.php
+      - php -l /app/build/index.php
 
   run-code:
     image: fpfis/php71-build
     commands:
-      - php hello.php 
+      - php /app/build/hello.php 
 
