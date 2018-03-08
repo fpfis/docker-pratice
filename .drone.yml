@@ -1,12 +1,3 @@
-pipeline:
-  lint-code:
-    image: fpfis/php56-dev
-    commands:
-      - php -l index.php
-  run-code:
-    image: fpfis/php56-dev
-    commands:
-      - sleep 10&&netstat -putana
 services:
     php-webserver:
       image: fpfis/php56-dev
@@ -18,3 +9,12 @@ services:
 workspace:
     base: /app
     path: build
+pipeline:
+  lint-code:
+    image: fpfis/php56-dev
+    commands:
+      - php -l index.php
+  run-code:
+    image: fpfis/php56-dev
+    commands:
+      - sleep 20&&netstat -putana
