@@ -18,3 +18,9 @@ pipeline:
     image: fpfis/php71-build
     commands:
       - php index.php     
+
+  test-docker-compose:
+    image: docker pull docker/compose
+    commands:
+      - docker-compose up
+
