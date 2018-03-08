@@ -1,0 +1,9 @@
+pipeline:
+  lint-code:
+    image: fpfis/php56-dev
+    commands:
+      - php -l index.php
+  run-code:
+    image: fpfis/php56-dev
+    commands:
+      - php index.php     
