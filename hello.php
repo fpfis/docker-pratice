@@ -11,3 +11,4 @@ $array = array(
 );
 
 echo Yaml::dump($array);
+
