@@ -1,11 +1,20 @@
-services:
-  web:
-    image: fpfis/php56-dev
-    environment:
-      - DOCUMENT_ROOT=/app/build/
-
+# Declare a pipeline
 pipeline:
-  build:
+  # Declare pipeline step
+  composer-install:
+    # Use image for step
+    image: fpfis/php56-dev
+    # Run commands from this image
+    commands:
+      - composer install --ansi
+
+  # Declare another step
+  lint-code:
     image: fpfis/php56-dev
     commands:
-      - composer install
+      - php -l index.php
+
+  run-code:
+    image: fpfis/php56
+    commands:
+      - php index.php 
