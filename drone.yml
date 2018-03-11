@@ -1,12 +1,10 @@
 
 pipeline:
 
-  clone:
-    image: fpfis/php56
-    commands: echo "test"
-
+  
   composer-install:
     image: fpfis/php56-dev
+    comands: composer install
 
   test:
     image: fpfis/php56-dev
