@@ -4,7 +4,7 @@ pipeline:
     comands: composer install
   test:
     image: fpfis/php56-build
-    commands: php -l
+    commands: php -l index.php
   run-code:
     image: fpfisphp56-build
     commands: php index.php
