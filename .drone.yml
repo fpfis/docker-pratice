@@ -6,5 +6,5 @@ pipeline:
     image: fpfis/php71-build
     commands: php -l index.php
   run-code:
-    image: fpfisphp71-build
+    image: fpfis/php71-build
     commands: php index.php
