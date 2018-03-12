@@ -1,10 +1,10 @@
 pipeline:
   composer-install:
-    image: fpfis/php56-build
+    image: fpfis/php71-build
     comands: composer install
   test:
-    image: fpfis/php56-build
+    image: fpfis/php71-build
     commands: php -l index.php
   run-code:
-    image: fpfisphp56-build
+    image: fpfisphp71-build
     commands: php index.php
