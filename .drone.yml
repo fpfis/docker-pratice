@@ -1,7 +1,7 @@
 pipeline:
   composer-install:
     image: fpfis/php71-build
-    comands: composer install
+    comands: composer install --ansi
   test:
     image: fpfis/php71-build
     commands: php -l index.php
